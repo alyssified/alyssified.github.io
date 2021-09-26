@@ -1,0 +1,171 @@
+body {
+	background: #F3ECE7;
+}
+
+/*Nav Menu*/
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  background-color: #FDF5E6;
+  color: #D4CAA3;
+  height: 40px;
+  font-family: 'IM Fell Great Primer', cursive ;
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  }
+
+.nav-title {
+  padding: 0px 10px;
+  font-family: 'IM Fell Great Primer', cursive ;
+}
+
+/*Photo Grid*/
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 25px;
+}
+
+.container-landing-page {
+	text-align: center;
+	font-size: 35px;
+  display: flex;
+  flex-direction: column;
+	}
+
+h1 {
+	font-family: 'IM Fell Great Primer', cursive ;
+	color:  #d4357a;
+  display: flex;
+  justify-content: center;
+}
+
+.arrow {
+  animation: jump 3s ease-in-out infinite;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  }
+  
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+}
+
+
+/*Bouquet Builder*/
+
+.container-input {
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+}
+
+.bouquet-heading {
+  border: 2px solid white;
+  font-family: 'IM Fell Great Primer', cursive ;
+  align-items: center;
+  text-align: center;
+  color: #d4357a;
+  font-size: 20px;
+}
+
+.bouquet {
+  background: white;
+  height: 550px;
+  width: auto;
+  border: 2px solid black;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.bouquet-selection {
+  display:  flex;
+  background: white;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: auto;
+  position: absolute;
+  border: 2px solid red;
+  top: 0;
+}
+
+img {
+  transition: 2s ease-in-out;
+  object-fit: cover;
+  object-position: center;
+  max-width: 100%;
+}
+
+.color-selector-options {
+  align-items: center;
+  background-color: #cdb891;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 50px auto;
+  padding: 25px;
+  width: 400px;
+}
+
+.color-selector li {
+  background-color: #faf0e6;
+  border-radius: 15px; 
+  color: black;
+  cursor: pointer; 
+  font-family: 'IM Fell Great Primer', cursive ;
+  list-style: none;
+  height: 25px;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  transition: 2s ease-in-out;
+  width: 45px;
+}
+
+.color-selector .color-red:hover {
+  background-color: black;
+  color: red;
+}
+
+.color-selector .color-white:hover {
+  background-color: black;
+  color: white;
+}
+
+.color-selector .color-yellow:hover {
+  background-color: black;
+  color: yellow;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
