@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<title>Build a Bouquet</title>
 	 <!-- Google Font embed -->
- <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer:ital@1&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Noto+Serif&display=swap" rel="stylesheet">
 
 </head>
 
@@ -15,24 +15,51 @@
 <!-- Nav Menu -->
 <header class="nav-menu">
     <section class="nav-left">
-      <h1>Byrne Bouquet</h1>
-    <div class="nav-title">Flowers</div>
-    <div class="nav-title">Ballons</div>
-    <div class="nav-title">Events</div>
-    <div class="nav-title">Order</div>
-  </section>
-  
-  <section class="nav-right">
-    <div class="nav-title">About Us</div>
-    <div class="nav-title">Contact Us</div>
-  </section>
-    <!-- add hover menus? e.g. homework 5 -->
+      <div class="company-name">
+        <h2>Byrne Bouquet</h2>
+      </div>
+          
+      <ul class="nav">
+          <li id="menu-1-button">Specialties</li>
+          <li id="menu-2-button">Events</li>
+          <li id="menu-3-button">Press</li>
+      </ul>
+        
+      <aside class="dropdown-menu" id="menu-1">
+        <ul class="menu-item-list">
+          <li><a href="#">Arrangements</a></li>
+          <li><a href="#">Wreaths</a></li>
+          <li><a href="#">Bouquets</a></li>
+        </ul>
+      </aside>
+
+      <aside class="dropdown-menu" id="menu-2">
+        <ul class="menu-item-list">
+          <li><a href="#">Weddings</a></li>
+          <li><a href="#">Birthdays</a></li>
+          <li><a href="#">Showers</a></li>
+          <li><a href="#">And Much More!</a></li>
+        </ul>
+      </aside>
+
+      <aside class="dropdown-menu" id="menu-3">
+        <ul class="menu-item-list">
+          <li><a href="#">Collaborations</a></li>
+          <li><a href="#">Newspaper</a></li>
+          <li><a href="#">Interviews</a></li>
+          <li><a href="#">As Seen In</a></li>
+        </ul>
+      </aside>   
 </header>
 
-<!-- Photo Grid -->
-<section>
-  <h1>Byrne Bouquet</h1>
-<div class="photo-grid">
+
+<!-- Main Section with Photo Grid -->
+<section class=main-section>
+  
+  <div class="main-header">
+    <h1>Byrne Bouquet</h1>
+  </div>
+  <div class="photo-grid">
     <div>
       <img src="images/grid1.jpg">
     </div>
@@ -45,16 +72,22 @@
 </div>
 </section>
 
-<!-- Header -->
-	<section class="container-landing-page">
-		<div id="splash" class="splash">
-			<h1> Build a Bouquet! </h1> 
-    </div>
-    <p class ="description">Let us design your floral arrangements for your next event</p>
-		<div id="arrow" class="arrow">↓</div>	
-    </div>
-    <h2>Let's Build a Bouquet!</h2>
-  </section>
+<!-- Middle Section -->
+<section class="middle-section">
+
+	<div class="middle-header">
+		<h1> Build a Bouquet! </h1> 
+  </div>
+  
+  <div class="description">
+    Let us design your floral arrangements for your next event. I ain’t dandelion. Show someone how much you love them a lily more each day. Get clover with it! Let us rose to the ocassion!
+  </div>  
+  <div class="build-bouquet-header"> 
+    <h2>Build away your Bouquet!</h2>
+  </div>
+	<div id="arrow" class="arrow">↓</div>	
+  </div>
+</section>
  
    
 <!-- Bouquet Display -->
@@ -74,17 +107,18 @@
       </ul>
 </section>
 
-<!-- Bouquet Order -->
+<!-- Bouquet Order Information-->
 
-<section>
-  <form>
-    <fieldset>
-      <legend>Bouquet Order Information</legend>
-      <div class="recipient-name">
-       <label for="recipient-name">Recipient Name</label>
-       <input type="text" id="recipient-name" placeholder="Who's the lucky one?">
-      </div>
-    
+<form id="recipient-info">
+  
+  <fieldset>
+    <legend>Recipient Info</legend>
+    <div class="recipient-name">   
+      <input type="text" name="name" placeholder="Lucky Recipient" id="first-name">
+    </div>     
+  </fieldset>
+
+  <fieldset>
      <label for="radio-container">What's the ocassion?</label>
       <div class="radio-container">
         <div class="radio">
@@ -93,21 +127,25 @@
         </div>
         <div class="radio">
           <input type="radio" id="radio2" name="radio-group">
-          <label for="radio2"><span>Anniversary
+          <label for="radio2"><span>Anniversary</span></label>
+        </div>
         <div class="radio">
           <input type="radio" id="radio3" name="radio-group">
           <label for="radio3"><span>Just Because</span></label>
         </div>
-          <input type="submit" value="Submit">
-    </fieldset>
-  </form>
-</section>
+      </div>
+  </fieldset>      
+                       
+<ul id="errors"></ul>            
+          
+<input type="submit" value="Submit">
 
-
+</form>       
 
 <script src='js/script.js'></script>
 
 </body>
+
 </html>
 
 

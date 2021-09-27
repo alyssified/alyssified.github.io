@@ -1,50 +1,164 @@
 body {
-	background: #F3ECE7;
+	background: #CCCCCC;
 }
+
+html {
+ font-family: 'Crimson Text', serif;
+}
+
 
 /*Nav Menu*/
 
 .nav-menu {
+  background-color: #EEEEEE;
+  border: 2px solid black;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  background-color: #FDF5E6;
-  color: #D4CAA3;
   height: 40px;
-  font-family: 'IM Fell Great Primer', cursive ;
+  padding: 15px 25px;
 }
 
-.nav-left, .nav-right {
-  display: flex;
+.nav-left {
   align-items: center;
-  justify-content: flex-start;
-  text-align: center;
-  }
-
-.nav-title {
-  padding: 0px 10px;
-  font-family: 'IM Fell Great Primer', cursive ;
+  display: flex;
 }
 
-/*Photo Grid*/
+.company-name {
+  font-family: cursive;
+  color: #B15C7B;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  margin: 5px;
+ }
+
+ul {
+  list-style: none;
+}
+
+.nav li {
+  font-size: 20px;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+/* DROPDOWN MENU */
+
+.dropdown-menu {
+  background-color: white;
+  display: none;
+  padding: 10px;
+  position: absolute; 
+  top: 60px;
+  width: 250px;
+  z-index: 10;
+}
+
+.dropdown-menu#menu-1 {
+ left: 100px;
+  min-width: 400px;
+}
+
+.dropdown-menu#menu-2 {
+  left: 150px;
+  min-width: 400px;
+}
+
+.dropdown-menu#menu-3 {
+  left: 250px;
+  min-width: 400px;
+}
+
+.menu-item-list {
+  margin: 0;
+  padding-left: 0;
+}
+
+#menu-2 .menu-item-list, 
+#menu-3 .menu-item-list {
+  column-count: 2;
+  column-gap: 5px;
+}
+
+.menu-item-list li a {
+  color: #454545;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+ 
+#top-nav {
+  position: fixed;
+}
+
+.show {
+  display: block;
+}
+
+/*Main Section with Photo Grid*/
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: cursive;
+  color: #B15C7B;;
+  font-size: 40px;
+}
 
 .photo-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 25px;
+  border: 2px solid black;
+  padding: 25px;
+  background: #EEEEEE;
 }
 
-.container-landing-page {
-	text-align: center;
-	font-size: 35px;
+
+/* Middle Secction */
+
+.middle-section {
   display: flex;
   flex-direction: column;
-	}
+  background: #EEEEEE;
+  border: 2px solid black;
+  padding: 25px;
+}
 
-h1 {
-	font-family: 'IM Fell Great Primer', cursive ;
-	color:  #d4357a;
+.middle-header {
+  display:  flex;
+  justify-content: center;
+  font-size: 35px;
+  color: #B15C7B;
+}
+
+.description {
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: black;
   display: flex;
   justify-content: center;
+  padding: 25px;
+}
+
+.build-bouquet-header {
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #B15C7B;
+  display: flex;
 }
 
 .arrow {
@@ -52,6 +166,8 @@ h1 {
   text-decoration: none;
   display: flex;
   justify-content: center;
+  font-size:  55px;
+  color: #B15C7B;
   }
   
 @keyframes jump {
@@ -67,25 +183,13 @@ h1 {
 /*Bouquet Builder*/
 
 .container-input {
-  border: 2px solid white;
   display: flex;
   flex-direction: column;
 }
 
-.bouquet-heading {
-  border: 2px solid white;
-  font-family: 'IM Fell Great Primer', cursive ;
-  align-items: center;
-  text-align: center;
-  color: #d4357a;
-  font-size: 20px;
-}
-
 .bouquet {
-  background: white;
   height: 550px;
   width: auto;
-  border: 2px solid black;
   position: relative;
   display: flex;
   overflow: hidden;
@@ -94,18 +198,15 @@ h1 {
 
 .bouquet-selection {
   display:  flex;
-  background: white;
   align-items: center;
   justify-content: center;
   height: 100%;
   width: auto;
   position: absolute;
-  border: 2px solid red;
   top: 0;
 }
 
 img {
-  transition: 2s ease-in-out;
   object-fit: cover;
   object-position: center;
   max-width: 100%;
@@ -113,13 +214,14 @@ img {
 
 .color-selector-options {
   align-items: center;
-  background-color: #cdb891;
+  background-color: #EEEEEE;
   border-radius: 5px;
+  border: 2px solid black;
   display: flex;
   justify-content: center;
   margin: 0 auto 50px auto;
-  padding: 25px;
-  width: 400px;
+  padding: 10px;
+  width: 350px;
 }
 
 .color-selector li {
@@ -127,13 +229,12 @@ img {
   border-radius: 15px; 
   color: black;
   cursor: pointer; 
-  font-family: 'IM Fell Great Primer', cursive ;
   list-style: none;
   height: 25px;
   margin: 5px;
   padding: 5px;
   text-align: center;
-  transition: 2s ease-in-out;
+  transition: 1s ease-in-out;
   width: 45px;
 }
 
@@ -151,6 +252,8 @@ img {
   background-color: black;
   color: yellow;
 }
+
+
 
 
 
